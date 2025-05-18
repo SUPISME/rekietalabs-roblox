@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RekietaLabsLLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0a0a0f;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      animation: fadeInDown 1s ease forwards;
+      opacity: 0;
+    }
+
+    header img.logo {
+      width: 150px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #00ffeaaa;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    header img.logo:hover {
+      transform: rotate(10deg) scale(1.1);
+      box-shadow: 0 0 25px #00ffeaee;
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      color: #00ffea;
+      margin-bottom: 0.5rem;
+    }
+
+    header p.subtitle {
+      color: #66fff9aa;
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 900px;
+      width: 100%;
+      animation: fadeInUp 1s ease 0.5s forwards;
+      opacity: 0;
+    }
+
+    section {
+      background: #121217;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px #00ffea33;
+      transition: box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 0 35px #00ffeaaa;
+    }
+
+    section h2 {
+      color: #00ffea;
+      margin-bottom: 1rem;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    section p {
+      font-weight: 300;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .owner {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .owner img.pfp {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #00ffea;
+      box-shadow: 0 0 15px #00ffeaaa;
+      object-fit: cover;
+      animation: float 3s ease-in-out infinite;
+    }
+    .owner span {
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: #00ffea;
+      user-select: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.6rem;
+      background: #00ffea;
+      color: #0a0a0f;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 0 15px #00ffea88;
+      user-select: none;
+    }
+    .btn:hover {
+      background: #00c8b6;
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px #00c8b6dd;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .owner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="RLR.jpeg" alt="RekietaLabsLLC Logo" class="logo" />
+    <h1>RekietaLabsLLC</h1>
+    <p class="subtitle">Where imagination becomes reality in 3D printing</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>Welcome to RekietaLabsLLC! We are an up-and-coming 3D printing business where your imagination becomes reality.  
+      Our passion is turning your creative ideas into tangible objects with precision and care.  
+      Whether you want custom models, prototypes, or unique collectibles, we strive to provide top-quality prints with fast turnaround and friendly support.</p>
+    </section>
+
+    <section>
+      <h2>Owner</h2>
+      <div class="owner">
+        <img src="owner-pfp-placeholder.jpg" alt="krekieta Roblox PFP" class="pfp" />
+        <span>krekieta</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Want to Work With Us?</h2>
+      <p>Come down to our <strong>Application Center</strong> and take a chance to see if you get picked!</p>
+      <a href="https://www.roblox.com/games/132667363858654/Application-Center" target="_blank" rel="noopener" class="btn">Apply Here</a>
+    </section>
+
+    <section>
+      <h2>Already Hired and Waiting for a Role?</h2>
+      <p>Visit our <strong>Training Center</strong> to level up your skills, complete challenges, and prepare for your new role.</p>
+      <a href="https://www.roblox.com/games/92734907583772/RekietaLabs-Training-Centre" target="_blank" rel="noopener" class="btn">Go to Training Center</a>
+    </section>
+
+    <section>
+      <h2>Want to Skip the Hiring Process?</h2>
+      <p>Head to our <strong>Rank Center</strong> where you can buy your way up to the top ranks and unlock exclusive perks!</p>
+      <a href="#" class="btn">Visit Rank Center</a>
+    </section>
+  </main>
+</body>
+</html>
