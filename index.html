@@ -1,65 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RekietaLabs Roblox</title>
-  <link rel="icon" href="images/krekieta-pfp.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Outfit:wght@300;600&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-  <script src="https://unpkg.com/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-
-  <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: linear-gradient(to bottom, #0f172a, #1e293b);
-      color: white;
-    }
-
-    .glass {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Loader */
-    #loader {
-      position: fixed;
-      z-index: 9999;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: #0f172a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
-
-    #loader.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .spinner {
-      width: 60px;
-      height: 60px;
-      border: 6px solid #38bdf8;
-      border-top: 6px solid transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-bottom: 1rem;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    .glow:hover {
-      box-shadow: 0 0 15px #38bdf8;
-    }
-  </style>
+  <!-- ... same as before ... -->
 </head>
 <body class="overflow-x-hidden">
 
@@ -70,8 +12,9 @@
 </div>
 
 <!-- Header -->
-<header class="text-center py-10">
-  <img src="images/krekieta-pfp.png" alt="PFP" class="mx-auto w-24 h-24 rounded-full border-4 border-blue-500 animate-pulse"/>
+<header class="text-center py-10 flex flex-col items-center gap-4">
+  <img src="images/RLR.jpeg" alt="RekietaLabs Logo" class="w-28 h-28 rounded-lg shadow-lg" />
+  <img src="images/krekieta-pfp.png" alt="PFP" class="w-24 h-24 rounded-full border-4 border-blue-500 animate-pulse"/>
   <h1 class="text-4xl font-bold mt-4 text-blue-400">RekietaLabs LLC</h1>
   <p class="text-sm mt-1 tracking-wide text-gray-300">"Printing Your Dreams... in Roblox style."</p>
 </header>
@@ -103,7 +46,7 @@
     <div class="glass p-6 rounded-xl hover:scale-105 transition transform duration-300 glow" data-tilt>
       <h3 class="text-xl font-bold mb-2 text-yellow-300">Rank Center</h3>
       <p class="mb-3 text-gray-300">Skip the wait! Buy your way to the top ranks here.</p>
-      <a href="#" class="text-yellow-400 underline">Visit Rank Center</a>
+      <a href="https://www.roblox.com/games/117315932074976/Rank-Center" class="text-yellow-400 underline">Visit Rank Center</a>
     </div>
   </div>
 </section>
@@ -124,12 +67,10 @@
 <script>
   AOS.init();
 
-  // Loader hide
   window.addEventListener('load', () => {
     document.getElementById('loader').classList.add('hidden');
   });
 
-  // Live group shout fetcher
   fetch('https://groups.roblox.com/v1/groups/35462392')
     .then(res => res.json())
     .then(data => {
@@ -139,7 +80,6 @@
       document.getElementById('group-shout').innerText = "Couldn't load shout.";
     });
 
-  // Initialize VanillaTilt
   VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
     max: 15,
     speed: 400,
