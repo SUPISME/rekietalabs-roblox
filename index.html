@@ -1,72 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RekietaLabs Roblox Group</title>
-  <link rel="icon" href="images/krekieta-pfp.png">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RekietaLabs Roblox</title>
+  <link rel="icon" href="images/krekieta-pfp.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Outfit:wght@300;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to bottom, #1f2937, #111827);
+      color: white;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-<body>
-  <header class="bg-[#23272a] text-white text-center p-6">
-    <img src="images/krekieta-pfp.png" alt="RekietaLabs Roblox PFP" class="w-32 h-32 mx-auto rounded-full">
-    <h1 class="text-3xl font-bold mt-4">RekietaLabs Roblox Group</h1>
-    <p class="italic">"Printing Your Dreams" - Now in Roblox</p>
+<body class="min-h-screen">
+
+  <!-- Header -->
+  <header class="text-center py-12 fade-in">
+    <img src="images/krekieta-pfp.png" class="mx-auto w-28 h-28 rounded-full border-4 border-white shadow-lg" alt="Owner PFP" />
+    <h1 class="text-4xl font-bold mt-4">RekietaLabs Roblox Group</h1>
+    <p class="text-gray-300 mt-2">"Printing Your Dreams" – Now in Roblox</p>
   </header>
 
-  <section class="p-6 bg-white text-center">
-    <h2 class="text-2xl font-semibold mb-4">🏅 Our Rank System</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+  <!-- About Section -->
+  <section class="fade-in max-w-3xl mx-auto p-6 text-center glass rounded-xl shadow-lg mb-8">
+    <img src="RLR.jpeg" class="w-24 h-24 mx-auto rounded-lg mb-4" alt="Group Logo" />
+    <h2 class="text-2xl font-semibold mb-2">About Us</h2>
+    <p class="text-gray-300">
+      Welcome to RekietaLabsLLC! We are an Up and Coming 3D Printing business where your imagination becomes a reality.
+      Our Roblox group brings creativity, tech, and opportunity together in one place. The owner is <strong>krekieta</strong>,
+      and we welcome all dreamers, developers, and builders into our team.
+    </p>
+  </section>
+
+  <!-- Ranks Section -->
+  <section class="fade-in p-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">🏅 Rank System</h2>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
       <!-- Rank Cards -->
-      <div class="p-4 bg-gray-100 rounded-xl shadow">
-        <h3 class="font-bold text-lg">Customer</h3>
-        <p>Enjoy our 3D printed models in-game.</p>
+      <div class="glass p-4 rounded-xl shadow-lg transition hover:scale-105">
+        <h3 class="text-xl font-bold">Customer</h3>
+        <p class="text-gray-300">Enjoy our creations and explore our group.</p>
       </div>
-      <div class="p-4 bg-gray-100 rounded-xl shadow">
-        <h3 class="font-bold text-lg">Affiliate</h3>
-        <p>Help promote our group and earn perks.</p>
+      <div class="glass p-4 rounded-xl shadow-lg transition hover:scale-105">
+        <h3 class="text-xl font-bold">Affiliate</h3>
+        <p class="text-gray-300">Help promote and grow our reach.</p>
       </div>
-      <div class="p-4 bg-gray-100 rounded-xl shadow">
-        <h3 class="font-bold text-lg">Staff</h3>
-        <p>Moderate, manage, and support users.</p>
+      <div class="glass p-4 rounded-xl shadow-lg transition hover:scale-105">
+        <h3 class="text-xl font-bold">Staff</h3>
+        <p class="text-gray-300">Moderate and assist our members.</p>
       </div>
-      <div class="p-4 bg-yellow-100 rounded-xl shadow">
-        <h3 class="font-bold text-lg">Developer</h3>
-        <p>Code our games and help bring ideas to life.</p>
+      <div class="glass p-4 rounded-xl shadow-lg transition hover:scale-105">
+        <h3 class="text-xl font-bold">Developer</h3>
+        <p class="text-gray-300">Bring tech and innovation to our games.</p>
       </div>
-      <div class="p-4 bg-green-100 rounded-xl shadow">
-        <h3 class="font-bold text-lg">Admin</h3>
-        <p>Run events, manage roles, and assist team-wide.</p>
+      <div class="glass p-4 rounded-xl shadow-lg transition hover:scale-105">
+        <h3 class="text-xl font-bold">Admin</h3>
+        <p class="text-gray-300">Manage roles and run events.</p>
       </div>
-      <div class="p-4 bg-red-100 rounded-xl shadow">
-        <h3 class="font-bold text-lg">Owner</h3>
-        <p>Founder and head of RekietaLabs Roblox!</p>
+      <div class="glass p-4 rounded-xl shadow-lg transition hover:scale-105">
+        <h3 class="text-xl font-bold text-red-400">Owner</h3>
+        <p class="text-gray-300">The visionary behind it all — <strong>krekieta</strong>.</p>
       </div>
     </div>
   </section>
 
-  <section class="bg-gray-50 p-6 text-center">
-    <h2 class="text-2xl font-semibold mb-4">📢 Live Group Announcements</h2>
-    <div id="group-shout" class="p-4 bg-white rounded-lg shadow text-left max-w-2xl mx-auto">
-      <p>Loading group shout...</p>
+  <!-- Group Links Section -->
+  <section class="fade-in max-w-3xl mx-auto text-center p-6">
+    <h2 class="text-2xl font-semibold mb-4">🚀 Join Us In-Game</h2>
+    <div class="space-y-4">
+      <a href="https://www.roblox.com/games/132667363858654/Application-Center" class="inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full shadow-lg transition">
+        Apply at Our Application Center
+      </a>
+      <a href="https://www.roblox.com/games/92734907583772/RekietaLabs-Training-Centre" class="inline-block bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full shadow-lg transition">
+        Visit Our Training Center
+      </a>
+      <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-full shadow-lg transition">
+        Skip Ahead at Rank Center (Coming Soon)
+      </a>
     </div>
   </section>
 
-  <footer class="text-center p-4 text-sm text-gray-500 mt-6">
-    © RekietaLabs™ Roblox – All rights reserved
+  <!-- Live Shout Section -->
+  <section class="fade-in text-center p-6">
+    <h2 class="text-2xl font-bold mb-4">📢 Live Announcements</h2>
+    <div id="group-shout" class="glass max-w-xl mx-auto p-4 rounded-lg shadow">
+      <p class="text-gray-200">Loading latest shout...</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 text-gray-500 mt-12">
+    © 2025 RekietaLabs™ – Powered by Roblox & Passion
   </footer>
 
   <script>
-    // Replace `yourGroupIdHere` with your actual Roblox group ID
     fetch('https://groups.roblox.com/v1/groups/YOUR_GROUP_ID_HERE')
-      .then(response => response.json())
+      .then(res => res.json())
       .then(data => {
-        const shout = data.shout?.body || "No current announcement.";
+        const shout = data?.shout?.body || "No announcement at the moment.";
         document.getElementById('group-shout').innerText = shout;
       })
       .catch(() => {
-        document.getElementById('group-shout').innerText = "Failed to load shout.";
+        document.getElementById('group-shout').innerText = "Unable to load shout.";
       });
   </script>
+
 </body>
 </html>
